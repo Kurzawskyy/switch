@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let a = Number(prompt("Podaj a."));
+        let b = Number(prompt("Podaj b."));
+        let wybor = prompt("Podaj jakie działanie chcesz wykonać na podanych liczbach.");
+
+        switch(wybor) {
+            case 'dodawanie':
+                document.write('Suma wynosi ', a+b);
+                break;
+            case 'odejmowanie':
+                docuemnt.write('Różnica wynosi ', a-b);
+                break;
+            case 'mnozenie':
+                docuemnt.write('Mnożenie wynosi ', a*b);
+                break;
+            case 'dzielenie':
+                while(b===0) {
+                    alert('Podczas dzielenia b nie może wynosić 0');
+                    b = Number(prompt('Podaj poprawne b'));
+                }
+                document.write('Dzielenie wynosi ', a/b);
+                break;
+            default:
+                document.write('Podana operacja nie została zarejestrowana.');
+        }
+    </script>
+</body>
+</html>
